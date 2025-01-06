@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 지도 Fragment -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:cameraTargetLat="37"
+        map:cameraTargetLng="127"
+        map:cameraZoom="13" />
+
+    <!-- 검색 및 내 위치 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_gravity="top">
+
+        <!-- 검색 입력 및 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:hint="어디로 떠나볼까요?" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검색"
+                android:background="@drawable/gray_buttons"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- 내 위치 버튼 -->
+        <Button
+            android:id="@+id/btn_my_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="내 위치 조회"
+            android:background="@drawable/gray_buttons"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 하단 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:padding="16dp">
+
+        <!-- 미술관 버튼 -->
+        <Button
+            android:id="@+id/btn_show_museums"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/purple_buttons"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="미술관으로 떠나볼까요?"
+            android:textSize="15sp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- 스키장 버튼 -->
+        <Button
+            android:id="@+id/btn_show_ski_resorts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_buttons"
+            android:textColor="@color/white"
+            android:text="스키장으로 떠나볼까요?"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="40dp" />
+    </LinearLayout>
+
+    <!-- 즐겨찾기 버튼 -->
+    <Button
+        android:id="@+id/btn_view_favorites"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/yellow_buttons"
+        android:text="★"
+        android:textColor="#424242"
+        android:textSize="22sp"/>
+</FrameLayout>
+
+

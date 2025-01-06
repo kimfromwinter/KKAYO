@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 상단 제목 -->
+    <TextView
+        android:id="@+id/tv_trip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="나의 여행 🧳"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!-- 날짜 설정 및 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <!-- 날짜 텍스트와 날짜 선택 버튼 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <!-- 날짜 텍스트 -->
+            <TextView
+                android:id="@+id/tv_trip_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여행 계획 :"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingEnd="8dp" />
+
+            <!-- 날짜 선택 버튼 -->
+            <Button
+                android:id="@+id/btn_select_trip_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜 선택 📅"
+                android:background="@drawable/gray_buttons"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- 날씨 텍스트와 날씨 검색 버튼 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <!-- 날씨 텍스트 -->
+            <TextView
+                android:id="@+id/tv_weather_check_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날씨 확인 :"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingEnd="8dp" />
+
+            <!-- 날씨 검색 버튼 -->
+            <Button
+                android:id="@+id/btn_search_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날씨 검색 ☀"
+                android:background="@drawable/gray_buttons"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- "나의 여행" 리스트 -->
+    <ListView
+        android:id="@+id/trip_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
